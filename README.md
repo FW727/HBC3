@@ -96,8 +96,8 @@ The app will install `hbctool` via `pip` inside Termux automatically.
 
 ### Clone & Build
 ```bash
-git clone https://github.com/Fireway727/HBCTool.git
-cd HBCTool/HBC3
+git clone https://github.com/FW727/HBC3.git
+cd HBC3
 ./gradlew assembleDebug
 ```
 
