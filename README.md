@@ -167,11 +167,11 @@ This project is licensed under the **MIT License** — see [LICENSE](LICENSE) fo
 
 ## Author
 
-**Fireway727** · FWXFTP Team
+**Fireway727** · FW Team
 
 - Telegram: [@Fireway727](https://t.me/Fireway727)
 - GitHub: [github.com/Fireway727](https://github.com/Fireway727)
 
 ---
 
-<p align="center"><sub>Made by FW · FWXFTP Team</sub></p>
+<p align="center"><sub>Made by FW · FW Team</sub></p>
