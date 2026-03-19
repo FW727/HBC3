@@ -1,7 +1,7 @@
 # HBC to Bytecode
 
 <p align="center">
-  <img src="app/src/main/res/mipmap/ic_app" width="96" alt="HBC to Bytecode icon"/>
+  <img src="app/src/main/res/mipmap/ic_app.png" width="96" alt="HBC to Bytecode icon"/>
 </p>
 
 <p align="center">
