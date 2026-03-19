@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/page_bg" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingHorizontal="20dp"
+        android:paddingTop="52dp" android:paddingBottom="28dp">
+
+        <!-- Header -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/setup_title" android:textSize="24sp" android:textStyle="bold"
+            android:textColor="@color/on_page" android:layout_marginBottom="4dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/setup_subtitle" android:textSize="13sp"
+            android:textColor="@color/hint_color" android:lineSpacingMultiplier="1.4"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Detection result card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/card_bg" app:cardCornerRadius="14dp"
+            app:cardElevation="0dp" android:layout_marginBottom="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:id="@+id/tvPythonState"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tvHbctoolState"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tvTermuxSource"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textSize="11sp" android:textColor="@color/hint_color"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Manual path input card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/card_bg" app:cardCornerRadius="14dp"
+            app:cardElevation="0dp" app:strokeColor="@color/cyan" app:strokeWidth="1dp"
+            android:layout_marginBottom="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/setup_path_label" android:textSize="11sp"
+                    android:textColor="@color/cyan" android:textStyle="bold"
+                    android:letterSpacing="0.06" android:layout_marginBottom="8dp"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                    android:hint="@string/setup_path_hint"
+                    android:layout_marginBottom="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCustomTermuxPath"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:inputType="textUri" android:imeOptions="actionDone"
+                        android:fontFamily="monospace" android:textSize="12sp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnApplyPath"
+                        android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1"
+                        android:text="@string/setup_apply_path" app:backgroundTint="@color/cyan"
+                        android:textColor="#0A0F1E" app:cornerRadius="10dp" android:layout_marginEnd="8dp"/>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRescan"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="wrap_content" android:layout_height="40dp"
+                        android:text="@string/setup_rescan" app:strokeColor="@color/hint_color"
+                        android:textColor="@color/hint_color" app:cornerRadius="10dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Status text -->
+        <TextView android:id="@+id/tvSetupStatus"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="@color/hint_color"
+            android:lineSpacingMultiplier="1.5" android:layout_marginBottom="16dp"/>
+
+        <!-- Install button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnInstallHbctool"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:text="@string/setup_install_btn"
+            app:backgroundTint="@color/cyan" android:textColor="#0A0F1E"
+            android:textSize="15sp" android:textStyle="bold"
+            app:cornerRadius="14dp" android:layout_marginBottom="10dp"/>
+
+        <!-- Progress -->
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressSetup"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:indeterminate="true" android:visibility="gone"
+            android:layout_marginBottom="8dp"
+            app:indicatorColor="@color/cyan" app:trackColor="?colorSurface"/>
+
+        <!-- Log card -->
+        <com.google.android.material.card.MaterialCardView android:id="@+id/logCardSetup"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/card_bg" app:cardCornerRadius="14dp"
+            app:cardElevation="0dp" android:visibility="gone" android:layout_marginBottom="14dp">
+            <ScrollView android:id="@+id/setupLogScroll"
+                android:layout_width="match_parent" android:layout_height="160dp">
+                <TextView android:id="@+id/tvSetupLog"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textSize="11sp" android:textColor="@color/cyan"
+                    android:fontFamily="monospace" android:lineSpacingMultiplier="1.4" android:padding="12dp"/>
+            </ScrollView>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Continue (only when ready) -->
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnContinueSetup"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:text="@string/setup_continue" app:backgroundTint="@color/green"
+            android:textColor="#0A0F1E" android:textSize="15sp" android:textStyle="bold"
+            app:cornerRadius="14dp" android:visibility="gone" android:layout_marginBottom="10dp"/>
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnSkipSetup"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent" android:layout_height="44dp"
+            android:text="@string/setup_skip" android:textColor="@color/hint_color" app:cornerRadius="12dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/made_by" android:textSize="11sp"
+            android:textColor="@color/hint_color" android:gravity="center"
+            android:layout_marginTop="12dp"/>
+    </LinearLayout>
+</ScrollView>

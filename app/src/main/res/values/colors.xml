@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand (never change between light/dark) -->
+    <color name="cyan">#00C8FF</color>
+    <color name="purple">#7B3FFF</color>
+    <color name="green">#00E57A</color>
+
+    <!-- Light defaults for semantic colors used in layouts/views -->
+    <color name="hint_color">#6B7A8D</color>
+    <color name="divider_color">#DDE3EF</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="page_bg">#F4F6FB</color>
+    <color name="on_page">#0D1117</color>
+</resources>

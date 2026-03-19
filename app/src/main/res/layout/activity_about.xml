@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/page_bg" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingHorizontal="20dp"
+        android:paddingTop="52dp" android:paddingBottom="32dp">
+
+        <!-- Back -->
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnBackAbout"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/nav_back" android:textColor="@color/cyan"
+            app:icon="@drawable/ic_arrow_back" app:iconTint="@color/cyan"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- App icon + name -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center_horizontal"
+            android:layout_marginBottom="32dp">
+            <ImageView android:layout_width="80dp" android:layout_height="80dp"
+                android:src="@mipmap/ic_app"
+                android:layout_marginBottom="14dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/app_name" android:textSize="26sp" android:textStyle="bold"
+                android:textColor="?colorOnBackground" android:layout_marginBottom="4dp"/>
+            <TextView android:id="@+id/tvAboutVersion"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="13sp" android:textColor="@color/hint_color" android:layout_marginBottom="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/app_subtitle" android:textSize="13sp"
+                android:textColor="@color/cyan"/>
+        </LinearLayout>
+
+        <!-- Made by card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/card_bg" app:cardCornerRadius="16dp"
+            app:cardElevation="0dp" app:strokeColor="#2200C8FF" app:strokeWidth="1dp"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="18dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/about_creator_label" android:textSize="11sp"
+                    android:textColor="@color/cyan" android:textStyle="bold"
+                    android:letterSpacing="0.08" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Fireway727" android:textSize="20sp" android:textStyle="bold"
+                    android:textColor="?colorOnSurface" android:layout_marginBottom="4dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/about_creator_desc" android:textSize="12sp"
+                    android:textColor="@color/hint_color"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Links -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="12dp">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnAboutTelegram"
+                android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1"
+                android:text="@string/about_telegram" app:backgroundTint="@color/cyan"
+                android:textColor="#0A0F1E" android:textStyle="bold"
+                app:cornerRadius="12dp" android:layout_marginEnd="8dp"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnAboutGithub"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1"
+                android:text="@string/about_github" app:strokeColor="@color/purple"
+                android:textColor="@color/purple" app:cornerRadius="12dp"/>
+        </LinearLayout>
+
+        <!-- Guide shortcut card -->
+        <com.google.android.material.card.MaterialCardView android:id="@+id/cardAboutGuide"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/card_bg" app:cardCornerRadius="16dp"
+            app:cardElevation="0dp" app:strokeColor="#2200E57A" app:strokeWidth="1dp"
+            android:layout_marginBottom="12dp" android:clickable="true" android:focusable="true">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/about_guide_title" android:textSize="15sp"
+                        android:textStyle="bold" android:textColor="?colorOnSurface" android:layout_marginBottom="3dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/about_guide_desc" android:textSize="12sp"
+                        android:textColor="@color/hint_color"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="&#8594;" android:textSize="20sp" android:textColor="@color/green"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Description card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/card_bg" app:cardCornerRadius="16dp"
+            app:cardElevation="0dp" android:layout_marginBottom="24dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/about_desc_label" android:textSize="11sp"
+                    android:textColor="@color/purple" android:textStyle="bold"
+                    android:letterSpacing="0.08" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/about_desc" android:textSize="13sp"
+                    android:textColor="?colorOnSurface" android:lineSpacingMultiplier="1.5"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/made_by" android:textSize="11sp"
+            android:textColor="@color/hint_color" android:gravity="center"/>
+    </LinearLayout>
+</ScrollView>

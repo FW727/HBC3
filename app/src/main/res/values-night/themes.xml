@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">#00C8FF</item>
+        <item name="colorOnPrimary">#0A0F1E</item>
+        <item name="colorPrimaryContainer">#003A4D</item>
+        <item name="colorOnPrimaryContainer">#A8EEFF</item>
+        <item name="colorSecondary">#A07BFF</item>
+        <item name="colorOnSecondary">#1A0060</item>
+        <item name="colorTertiary">#00E57A</item>
+        <item name="colorOnTertiary">#003820</item>
+        <item name="android:colorBackground">#080D1A</item>
+        <item name="colorSurface">#0F1829</item>
+        <item name="colorSurfaceVariant">#1A2440</item>
+        <item name="colorOnBackground">#E4EAF8</item>
+        <item name="colorOnSurface">#C8D6F0</item>
+        <item name="colorOnSurfaceVariant">#8898BB</item>
+        <item name="colorOutline">#2A3A58</item>
+        <item name="android:statusBarColor">#080D1A</item>
+        <item name="android:navigationBarColor">#080D1A</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>

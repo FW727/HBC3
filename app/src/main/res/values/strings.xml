@@ -1,0 +1,191 @@
+<resources>
+    <string name="app_name">HBC to Bytecode</string>
+    <string name="app_subtitle">Hermes Bytecode Toolkit</string>
+    <string name="feature_disasm">Disassemble</string>
+    <string name="feature_disasm_desc">Convert .hbc bytecode into readable .hasm assembly files</string>
+    <string name="feature_asm">Assemble</string>
+    <string name="feature_asm_desc">Pack .hasm files back into .hbc bytecode</string>
+    <string name="feature_finder">Hermes Finder</string>
+    <string name="feature_finder_desc">Search for keywords inside .hasm files</string>
+    <string name="made_by">Made by FW &#183; HBC to Bytecode</string>
+    <string name="lang_btn_es">ES</string>
+    <string name="lang_btn_en">EN</string>
+    <string name="nav_back">Back</string>
+    <string name="disasm_title">HBC &#8594; HASM</string>
+    <string name="disasm_hint">Select an index.android.bundle (or any .hbc) and an output folder. Tap Run in App or copy the command for Termux.</string>
+    <string name="btn_select_hbc">Select .hbc File</string>
+    <string name="btn_select_output_dir">Select Output Folder</string>
+    <string name="label_selected_hbc">Selected .hbc:</string>
+    <string name="label_output_dir">Output folder:</string>
+    <string name="asm_title">HASM &#8594; HBC</string>
+    <string name="asm_hint">Select the .hasm folder and output file. Tap Run in App or copy the command for Termux.</string>
+    <string name="btn_select_hasm_dir">Select .hasm Folder</string>
+    <string name="btn_select_output_hbc">Select Output .hbc</string>
+    <string name="label_selected_hasm_dir">Selected folder:</string>
+    <string name="label_output_hbc">Output .hbc:</string>
+    <string name="btn_run_in_app">&#9654; Run in App</string>
+    <string name="label_log">OUTPUT</string>
+    <string name="run_success">&#10003; Done</string>
+    <string name="run_error">&#10007; Failed</string>
+    <string name="or_termux">or open in Termux</string>
+    <string name="label_command">Generated command:</string>
+    <string name="btn_copy_command">Copy Command</string>
+    <string name="btn_run_termux">Open in Termux</string>
+    <string name="command_copied">Command copied to clipboard!</string>
+    <string name="termux_not_found">Termux is not installed</string>
+    <string name="no_file_yet">No file selected</string>
+    <string name="no_dir_yet">No folder selected</string>
+    <string name="finder_title">Hermes Finder</string>
+    <string name="finder_hint">Select .hasm files, choose keywords and search.</string>
+    <string name="btn_select_hasm_files">Select .hasm Files</string>
+    <string name="label_selected_files">%d file(s) selected</string>
+    <string name="section_predefined">Predefined Keywords</string>
+    <string name="section_custom">Custom Keyword</string>
+    <string name="hint_custom_keyword">Enter keyword&#8230;</string>
+    <string name="btn_add_keyword">Add</string>
+    <string name="btn_search">Search</string>
+    <string name="results_count">%d result(s) found</string>
+    <string name="no_results">No results found.</string>
+    <string name="no_files_selected">No .hasm files selected.</string>
+    <string name="no_keywords_selected">Select at least one keyword.</string>
+    <string name="searching">Searching&#8230;</string>
+    <string name="label_file">File:</string>
+    <string name="label_line">Line %d</string>
+    <string name="setup_title">Setup</string>
+    <string name="setup_subtitle">The app uses Termux Python to run hbctool.\nInstall it automatically with one tap.</string>
+    <string name="setup_install_btn">&#9654; Install hbctool</string>
+    <string name="setup_already_installed">&#10003; Already installed</string>
+    <string name="setup_need_python">Install Python in Termux first</string>
+    <string name="setup_need_python_hint">Python not found.\n\nIn Termux run:\n  pkg install python\n\nThen come back here.</string>
+    <string name="setup_tap_install">Python found! Tap Install to set up hbctool.</string>
+    <string name="setup_ready">&#10003; Everything is ready.</string>
+    <string name="setup_continue">Continue &#8594;</string>
+    <string name="setup_skip">Skip for now</string>
+    <string name="install_title">Installation</string>
+    <string name="install_body">Requires Termux with Python:\n\n  pkg install python\n  pip install hbctool\n\nThe app can install hbctool automatically via Setup.</string>
+    <string name="crash_title">App Crashed</string>
+    <string name="crash_subtitle">Something went wrong. Copy the error and report it.</string>
+    <string name="crash_copy">Copy Error</string>
+    <string name="crash_telegram">Report on Telegram</string>
+    <string name="crash_restart">Restart App</string>
+    <string name="crash_copied">Error copied to clipboard</string>
+    <string name="telegram_not_found">Telegram is not installed</string>
+    <string name="setup_path_label">TERMUX BIN PATH</string>
+    <string name="setup_path_hint">/data/data/com.termux/files/usr/bin</string>
+    <string name="setup_apply_path">Apply</string>
+    <string name="setup_rescan">Rescan</string>
+    <string name="status_ready">&#10003; Ready &#8212; hbctool detected</string>
+    <string name="status_no_termux">&#9888; Termux not found &#8212; tap Setup</string>
+    <string name="status_no_python">&#9888; Python missing &#8212; tap Setup</string>
+    <string name="status_no_hbctool">&#9888; hbctool not installed &#8212; tap Setup</string>
+    <string name="btn_guide">&#128218; Guide</string>
+    <string name="btn_about">About</string>
+    <string name="guide_prev">&#8592; Back</string>
+    <string name="guide_next">Next &#8594;</string>
+    <string name="guide_done">&#10003; Done</string>
+    <string name="guide_sec_start">WELCOME</string>
+    <string name="guide_sec_setup">SETUP</string>
+    <string name="guide_sec_disasm">DISASSEMBLE</string>
+    <string name="guide_sec_asm">ASSEMBLE</string>
+    <string name="guide_sec_finder">HERMES FINDER</string>
+    <string name="guide_sec_tips">TIPS</string>
+    <string name="guide_0_title">Welcome to HBC to Bytecode</string>
+    <string name="guide_0_body">This app lets you disassemble and assemble Hermes Bytecode files (.hbc) used by React Native apps on Android.
+
+The main file you\'ll work with is usually called:
+
+  index.android.bundle
+
+This guide walks you through all features step by step.</string>
+    <string name="guide_1_title">Step 1 &#8212; Install Termux &amp; Python</string>
+    <string name="guide_1_tip">&#9888; Use Termux from F-Droid, not the Play Store. The Play Store version is outdated and may not work correctly.</string>
+    <string name="guide_1_body">The app uses Termux to run Python and hbctool.
+
+1. Install Termux from F-Droid (not Play Store)
+2. Open Termux and run:
+
+   pkg install python
+
+3. Come back here and tap Setup on the main screen.
+
+The app will install hbctool automatically.</string>
+    <string name="guide_2_title">Step 2 &#8212; Run Setup</string>
+    <string name="guide_2_body">After installing Python in Termux:
+
+1. Tap Setup on the main screen
+2. The app auto-detects Termux
+3. If not found, enter the path manually:
+   /data/data/com.termux/files/usr/bin
+4. Tap Install hbctool
+5. Wait for completion
+6. Tap Continue
+
+You only need to do this once.</string>
+    <string name="guide_2_tip">&#128161; If the app cannot find Termux automatically, paste the path manually and tap Apply.</string>
+    <string name="guide_3_title">Disassemble &#8212; HBC &#8594; HASM</string>
+    <string name="guide_3_body">To disassemble a Hermes bundle:
+
+1. Tap Disassemble on the main screen
+2. Tap Select .hbc File
+3. Select your index.android.bundle
+4. Tap Select Output Folder
+5. Tap Run in App
+
+The log shows progress in real time.</string>
+    <string name="guide_3_tip">&#128161; Use an empty folder as output to avoid mixing files from different bundles.</string>
+    <string name="guide_4_title">Reading .hasm Files</string>
+    <string name="guide_4_body">After disassembly you\'ll find .hasm files with Hermes instructions like:
+
+  LoadParam r0, 0
+  GetById r1, r0, 1, \"token\"
+  Call r2, r1, 1
+
+Edit these with any text editor to patch the app\'s behavior.
+Use Hermes Finder to search for specific strings or opcodes.</string>
+    <string name="guide_5_title">Assemble &#8212; HASM &#8594; HBC</string>
+    <string name="guide_5_body">After editing your .hasm files:
+
+1. Tap Assemble on the main screen
+2. Select the .hasm folder
+3. Name the output index.android.bundle
+4. Tap Run in App
+
+Then replace the original bundle in the APK and re-sign.</string>
+    <string name="guide_5_tip">&#9888; All .hasm files in the folder will be assembled. Do not mix files from different bundles.</string>
+    <string name="guide_6_title">Hermes Finder &#8212; Search</string>
+    <string name="guide_6_body">Hermes Finder searches inside .hasm files:
+
+1. Tap Hermes Finder
+2. Select one or more .hasm files
+3. Pick predefined keywords OR type your own
+4. Tap Search
+
+Results show file name, line number and the matching line with keyword highlighted.</string>
+    <string name="guide_6_tip">&#128161; You can select multiple .hasm files at once. Results are grouped by file for easy navigation.</string>
+    <string name="guide_7_title">Useful keywords to search for</string>
+    <string name="guide_7_body">Useful things to search for:
+
+&#8226; token, apiKey, secret - find API credentials
+&#8226; LoadConstString - all string literals
+&#8226; JmpTrue / JmpFalse - conditional branches (license checks)
+&#8226; AsyncFunction - async calls
+&#8226; fetch - network calls
+&#8226; require - module imports</string>
+    <string name="guide_8_title">Pro Tips</string>
+    <string name="guide_8_body">&#8226; Open in Termux generates the hbctool command for manual use
+&#8226; If hbctool reports unsupported version, you need a newer hbctool
+&#8226; Worm border wiggles (~) when processing
+&#8226; Theme follows device setting automatically
+&#8226; Tap Setup &#8594; Rescan if Termux is not detected</string>
+    <string name="guide_8_tip">&#128161; Always back up your original .hbc file before modifying. Assembly cannot be undone.</string>
+    <string name="about_version">Version %s</string>
+    <string name="about_creator_label">DEVELOPER</string>
+    <string name="about_creator_desc">Android developer and modder</string>
+    <string name="about_telegram">Telegram</string>
+    <string name="about_github">GitHub</string>
+    <string name="about_github_url">https://github.com</string>
+    <string name="about_guide_title">User Guide</string>
+    <string name="about_guide_desc">Step-by-step instructions for all features</string>
+    <string name="about_desc_label">ABOUT</string>
+    <string name="about_desc">HBC to Bytecode is a tool for disassembling and assembling Hermes Bytecode (.hbc) files used by React Native Android apps. Built for Android developers and reverse engineers who work without a PC, directly from their device.</string>
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/page_bg"
+    android:paddingHorizontal="20dp" android:paddingTop="52dp" android:paddingBottom="24dp">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:gravity="center_horizontal" android:layout_marginBottom="20dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="68dp" android:layout_height="68dp"
+            app:cardBackgroundColor="#1AFF4D4D" app:cardCornerRadius="34dp"
+            app:cardElevation="0dp" app:strokeColor="#44FF4D4D" app:strokeWidth="1.5dp"
+            android:layout_marginBottom="14dp">
+            <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+                android:text="✗" android:textSize="26sp" android:textColor="#FF4D4D" android:gravity="center"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/crash_title" android:textSize="21sp" android:textStyle="bold"
+            android:textColor="@color/on_page" android:layout_marginBottom="6dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/crash_subtitle" android:textSize="13sp"
+            android:textColor="@color/hint_color" android:gravity="center" android:lineSpacingMultiplier="1.4"/>
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        app:cardBackgroundColor="@color/card_bg" app:cardCornerRadius="14dp" app:cardElevation="0dp"
+        app:strokeColor="#33FF4D4D" app:strokeWidth="1dp" android:layout_marginBottom="16dp">
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvCrashTrace" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textSize="11sp" android:textColor="@color/hint_color" android:fontFamily="monospace"
+                android:lineSpacingMultiplier="1.4" android:padding="14dp" android:textIsSelectable="true"/>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginBottom="10dp">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCopyCrash"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1"
+            android:text="@string/crash_copy" app:strokeColor="#FF4D4D" android:textColor="#FF4D4D"
+            app:cornerRadius="12dp" android:layout_marginEnd="8dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReportTelegram"
+            android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1"
+            android:text="@string/crash_telegram" app:backgroundTint="#FF4D4D"
+            android:textColor="#FFFFFF" app:cornerRadius="12dp"/>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRestartApp"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="match_parent" android:layout_height="44dp"
+        android:text="@string/crash_restart" android:textColor="@color/hint_color" app:cornerRadius="12dp"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/made_by" android:textSize="11sp"
+        android:textColor="@color/hint_color" android:gravity="center" android:layout_marginTop="8dp"/>
+</LinearLayout>

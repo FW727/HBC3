@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/page_bg" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingHorizontal="20dp"
+        android:paddingTop="52dp" android:paddingBottom="32dp">
+
+        <!-- Header row -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/app_name" android:textSize="26sp" android:textStyle="bold"
+                    android:textColor="@color/on_page" android:letterSpacing="0.02"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/app_subtitle" android:textSize="12sp"
+                    android:textColor="@color/hint_color" android:layout_marginTop="2dp"/>
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnLang"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content" android:layout_height="36dp"
+                android:text="ES" android:textSize="12sp" app:strokeColor="@color/cyan"
+                android:textColor="@color/cyan" app:cornerRadius="18dp"
+                android:paddingHorizontal="14dp"/>
+        </LinearLayout>
+
+        <!-- Termux status chip -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+            <TextView android:id="@+id/tvTermuxStatus"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:textSize="12sp"
+                android:textColor="@color/hint_color" android:text="Checking…"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSetup"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content" android:layout_height="32dp"
+                android:text="⚙ Setup" android:textSize="12sp"
+                android:textColor="@color/cyan" app:cornerRadius="8dp"/>
+        </LinearLayout>
+
+        <!-- Cyan accent bar -->
+        <View android:layout_width="36dp" android:layout_height="3dp"
+            android:background="@color/cyan" android:layout_marginBottom="24dp"/>
+
+        <!-- Card: Disassemble -->
+        <com.hbctool.ui.AnimatedBorderCardView android:id="@+id/cardDisasm"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="18dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="@string/feature_disasm"
+                        android:textSize="17sp" android:textStyle="bold" android:textColor="?attr/colorOnSurface"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="HBC → HASM" android:textSize="10sp" android:textColor="@color/cyan"
+                        android:background="@drawable/bg_badge_cyan"
+                        android:paddingHorizontal="8dp" android:paddingVertical="3dp"/>
+                </LinearLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/feature_disasm_desc" android:textSize="12sp"
+                    android:textColor="@color/hint_color" android:layout_marginTop="5dp"/>
+            </LinearLayout>
+        </com.hbctool.ui.AnimatedBorderCardView>
+
+        <!-- Card: Assemble -->
+        <com.hbctool.ui.AnimatedBorderCardView android:id="@+id/cardAsm"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="18dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="@string/feature_asm"
+                        android:textSize="17sp" android:textStyle="bold" android:textColor="?attr/colorOnSurface"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="HASM → HBC" android:textSize="10sp" android:textColor="@color/purple"
+                        android:background="@drawable/bg_badge_purple"
+                        android:paddingHorizontal="8dp" android:paddingVertical="3dp"/>
+                </LinearLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/feature_asm_desc" android:textSize="12sp"
+                    android:textColor="@color/hint_color" android:layout_marginTop="5dp"/>
+            </LinearLayout>
+        </com.hbctool.ui.AnimatedBorderCardView>
+
+        <!-- Card: Hermes Finder -->
+        <com.hbctool.ui.AnimatedBorderCardView android:id="@+id/cardFinder"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="18dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="@string/feature_finder"
+                        android:textSize="17sp" android:textStyle="bold" android:textColor="?attr/colorOnSurface"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text=".hasm" android:textSize="10sp" android:textColor="@color/green"
+                        android:background="@drawable/bg_badge_green"
+                        android:paddingHorizontal="8dp" android:paddingVertical="3dp"/>
+                </LinearLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/feature_finder_desc" android:textSize="12sp"
+                    android:textColor="@color/hint_color" android:layout_marginTop="5dp"/>
+            </LinearLayout>
+        </com.hbctool.ui.AnimatedBorderCardView>
+
+        <!-- Install hint -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/card_bg" app:cardCornerRadius="12dp"
+            app:cardElevation="0dp" android:layout_marginBottom="20dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="14dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/install_title" android:textSize="12sp"
+                    android:textStyle="bold" android:textColor="@color/cyan"
+                    android:layout_marginBottom="4dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/install_body" android:textSize="11sp"
+                    android:textColor="?attr/colorOnSurface" android:fontFamily="monospace"
+                    android:lineSpacingMultiplier="1.4"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Bottom row: Guide + About -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center" android:layout_marginBottom="8dp">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnGuide"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content" android:layout_height="40dp"
+                android:text="@string/btn_guide" android:textSize="12sp"
+                android:textColor="@color/cyan" app:cornerRadius="10dp"
+                android:layout_marginEnd="8dp"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnAbout"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content" android:layout_height="40dp"
+                android:text="@string/btn_about" android:textSize="12sp"
+                android:textColor="@color/purple" app:cornerRadius="10dp"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/made_by" android:textSize="11sp"
+            android:textColor="@color/hint_color" android:gravity="center"/>
+    </LinearLayout>
+</ScrollView>
