@@ -80,7 +80,7 @@ pkg install python
 ```
 
 ### 3 — Install the APK
-Download the latest `.apk` from the [Releases](https://github.com/Fireway727/HBCTool/releases/latest) page and install it.
+Download the latest `.apk` from the [Releases](https://github.com/FW727/HBC3/releases/tag/1.0) page and install it.
 
 ### 4 — Run Setup
 Open the app → tap **Setup** → tap **Install hbctool**.  
